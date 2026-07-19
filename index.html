@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>استبانة مشكلات أمهات المراهقين ذوي اضطراب طيف التوحد</title>
+  <meta name="description" content="استبانة استطلاعية لتحديد المشكلات والاحتياجات الفعلية للأمهات">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <span class="eyebrow">دراسة استطلاعية</span>
+      <h1>المشكلات التي تعاني منها أمهات المراهقين من ذوي اضطراب طيف التوحد</h1>
+      <p>تهدف هذه الاستبانة إلى تحديد المشكلات الفعلية التي تعاني منها الأمهات وترتيب أولويات الدعم. جميع المعلومات سرية، ولا يُطلب الاسم أو البريد الإلكتروني.</p>
+      <div class="meta"><span>⏱ 8–10 دقائق</span><span>🔒 إجابات سرية</span><span>الباحث: خالد محمد الزهراني</span></div>
+    </header>
+    <form id="survey">
+      <section class="card consent"><label><input type="checkbox" required> أوافق على المشاركة طوعًا بعد الاطلاع على هدف الاستبانة.</label><p class="surveyNotice">هذه استبانة استطلاعية لتحديد المشكلات والاحتياجات، وليست أداة تشخيص نفسي أو طبي.</p></section>
+      <section class="card"><h2>البيانات الأولية</h2><p class="hint">لا تتضمن البيانات ما يكشف هوية المشاركة.</p><div class="formGrid" id="demographics"></div></section>
+      <div class="progress"><span id="progressText">تمت الإجابة عن 0 من 48 عبارة</span><i id="progressBar"></i></div>
+      <div id="domains"></div>
+      <section class="card"><h2>ترتيب المشكلات والاحتياجات</h2><p class="hint">اختاري ثلاثة مجالات فقط تسبب لك مشكلات حاليًا.</p><div class="chips" id="domainChips"></div>
+        <label class="field"><span>ما المشكلة الأكثر تأثيرًا عليك حاليًا؟</span><textarea name="topProblem" required rows="3"></textarea></label>
+        <label class="field"><span>ما نوع الدعم أو المساعدة التي تحتاجين إليها أولًا؟</span><textarea name="supportNeed" required rows="3"></textarea></label>
+      </section>
+      <section class="card"><h2>استخدام تطبيقات الذكاء الاصطناعي</h2><div class="formGrid">
+        <label class="field"><span>هل سبق أن استخدمتِ تطبيق ذكاء اصطناعي للحصول على معلومات أو مساعدة تخص ابنك/ابنتك؟</span><select name="aiUse" required><option value="" disabled selected>اختاري</option><option>نعم</option><option>لا</option></select></label>
+        <label class="field"><span>ما مدى استعدادك لاستخدامها ضمن برنامج إرشادي وتحت إشراف الباحث؟</span><select name="aiReadiness" required><option value="" disabled selected>اختاري</option><option>كبيرة جدًا</option><option>كبيرة</option><option>متوسطة</option><option>قليلة</option><option>غير مستعدة</option></select></label>
+      </div><label class="field"><span>هل توجد مشكلة أخرى لم تتناولها الاستبانة؟ (اختياري)</span><textarea name="otherProblem" rows="3"></textarea></label></section>
+      <p class="error" id="error" hidden></p>
+      <button class="submit" id="submitButton">إرسال الإجابة</button>
+      <p class="footer">تستخدم البيانات لأغراض البحث العلمي فقط.</p>
+    </form>
+    <section class="thanks" id="thanks" hidden><div class="check">✓</div><h1>شكرًا لكِ</h1><p>تم استلام إجابتك بنجاح، وستستخدم لأغراض البحث العلمي فقط مع المحافظة على سريتها.</p></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
